@@ -1,0 +1,28 @@
+body {
+  font-size: 16px;
+  font-family: Roboto, sans-serif;
+  color: #000;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+.app {
+  text-align: center;
+}
+
+header, footer {
+  padding: 10px;
+  text-align: center;
+}
