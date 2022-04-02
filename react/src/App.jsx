@@ -3,7 +3,9 @@ import { Menu } from "./Components/Menu";
 import React from "react";
 import ScrollableAnchor, { configureAnchors }  from 'react-scrollable-anchor'
 import { Calculator } from "./Components/Calculator";
+import { removeHash } from 'react-scrollable-anchor'
 
+removeHash()
 configureAnchors({offset: -60, scrollDuration: 800})
 
 const items = [
@@ -139,7 +141,7 @@ function App() {
                                 <div className="contacts__content">
                                     <img src="/src/img/svg/pismo.svg" alt="Местоположение"/>
                                     <h3 className="contacts__info">АДРЕС:</h3>
-                                    <p className="contacts__content-text">НЕВСКИЙ ПРОСПЕКТ 140, ОФИС 140-142</p>
+                                    <p className="contacts__content-text">ПРОСПЕКТ РОССИИ 152, ОФИС 152</p>
                                 </div>
                                 <div className="contacts__content">
                                     <img src="/src/img/svg/telefon.svg" alt="Местоположение"/>
@@ -150,7 +152,7 @@ function App() {
                                 <div className="contacts__content">
                                     <img src="/src/img/svg/vremya.svg" alt="Местоположение"/>
                                     <h3 className="contacts__info">ВРЕМЯ РАБОТЫ:</h3>
-                                    <p className="contacts__content-text">ПН-СБ</p>
+                                    <p className="contacts__content-text">ПН-ПН</p>
                                     <p className="contacts__content-text">10:00 - 20:00</p>
                                 </div>
                                 <div className="contacts__content">

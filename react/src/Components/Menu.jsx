@@ -17,7 +17,7 @@ const Menu = ({header, items}) => {
                 <span className={menuActive ? 'active' : ''}/>
                 <span className={menuActive ? 'active' : ''}/>
             </div>
-            <nav className={menuActive ? 'header__nav active' : 'header__nav'}>
+            <nav onClick={e => e.stopPropagation()} className={menuActive ? 'header__nav active' : 'header__nav'}>
                 <div className="menu__header">{header}</div>
                 <ul>
                     {items.map((item, index) =>

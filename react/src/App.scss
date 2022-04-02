@@ -60,12 +60,13 @@ header, footer {
 
 .header__nav {
   position: fixed;
-  width: 100%;
+  width: 30%;
   height: 100%;
   top: 50px;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.9);
-  transform: translateX(-120%);
+  right: 0;
+  //background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(83, 80, 88, 0.9);
+  transform: translateX(300%);
   transition: all 0.3s ease;
 
   &.active {
@@ -231,6 +232,9 @@ header, footer {
 /*****************************************************
 ******************BIG-PROJECTS*************************
 *****************************************************/
+.big__projects {
+  margin-bottom: 100px;
+}
 
 .big__projects-h2 {
   max-width: 506px;
@@ -276,7 +280,6 @@ hr {
   }
   & p {
     color: #999999;
-    margin-bottom: 150px;
     line-height: calc(22/16) * 100%;
   }
 
@@ -294,7 +297,6 @@ hr {
 ******************CALCULATOR****************************
 *****************************************************/
 .calculator {
-  margin-bottom: 150px;
   & .calculator__h2 {
     font-weight: 500;
     font-size: 36px;
@@ -307,22 +309,57 @@ hr {
   & .calculator__text {
     color: #999999;
     line-height: 137.5%;
+    margin-bottom: 30px;
+  }
+  .calculator__item {
+    border: 3px solid #F7654A;
   }
 }
 
+.calculator__content {
+  display: flex;
+  color: #000;
+  padding: 50px;
+  & input {
+    width: 100%;
+    height: 38px;
+    border: 1px solid hsl(0, 0%, 80%);
+    padding: 8px;
+    border-radius: 4px;
+  }
+  & button {
+    padding: 10px 15px;
+    border-radius: 4px;
+    background-color: #F7654A;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  & .calculator__body {
+    flex: 1 0 250px;
+    margin-right: 50px;
+  }
+  & .calculator__callback {
+    flex: 1 0 250px;
+  }
+  .calculator__form {
+  }
+}
 /*****************************************************
 ******************CONTACTS****************************
 *****************************************************/
 
 .contacts {
-  margin-bottom: 150px;
+  margin: 120px 0 100px 0;
 }
 
 .contacts__body {
   display: flex;
   justify-content: space-between;
 }
-
 
 .contacts__h2 {
   font-weight: 500;
@@ -331,11 +368,12 @@ hr {
   text-transform: uppercase;
   color: #000;
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 100px;
 }
 
 .contacts__content {
   display: flex;
+  flex: 0 1 25%;
   flex-direction: column;
   align-items: center;
   max-width: 255px;
