@@ -1,20 +1,16 @@
 import { useState } from "react";
+import ScrollableAnchor from 'react-scrollable-anchor'
 
 const options = [
+    {value: '0', label: 'Выберите металл...'},
     {value: '90', label: 'Железо'},
     {value: '20', label: 'Руда'},
     {value: '250', label: 'Свинец'},
     {value: '350', label: 'Алюминий'}
 ]
 
-const size = [
-    {value: '0.1', label: '100 гр.'},
-    {value: '1', label: '1 кг.'},
-    {value: '100', label: '100 кг.'},
-    {value: '1000', label: '1 тн.'}
-]
-
 const cities = [
+    {value: '0', label: 'Выберите город...'},
     {value: '1420', label: 'Архангельск'},
     {value: '8547', label: 'Благовещенск'},
     {value: '2233', label: 'Екатеринбург'},
@@ -27,78 +23,112 @@ const cities = [
     {value: '2070', label: 'Уфа'},
 ]
 
+function SelectPrice({setPrice}) {
+    function handleChange(e) {
+        setPrice(e.target.value)
+    }
+
+    return (
+        <select
+            onChange={handleChange}
+            className={'calculator__input'}
+        >
+            {options.map((item, index) => {
+                return <option
+                    key={index}
+                    value={item.value}
+                >
+                    {item.label}
+                </option>
+            })}
+        </select>
+    )
+}
+
+function SelectDistance({setDistance}) {
+    function handleChange(e) {
+        setDistance(e.target.value)
+    }
+
+    return (
+        <select
+            onChange={handleChange}
+            className={'calculator__input'}
+        >
+            {cities.map((city, index) => {
+                return <option
+                    key={index}
+                    value={city.value}
+                >
+                    {city.label}
+                </option>
+            })}
+        </select>
+    )
+}
+
 const Calculator = () => {
     const [answer, setAnswer] = useState(null)
-    const [valueKm, setValueKm] = useState('')
     const [valueSize, setValueSize] = useState('')
-
-    function saveValueKm(e) {
-        setValueKm(e.target.value)
-    }
+    const [distance, setDistance] = useState(null)
+    const [price, setPrice] = useState(null)
 
     function saveValueSize(e) {
         setValueSize(e.target.value)
     }
 
     function calc() {
-        if (!valueKm || !valueSize) return
-        setValueKm('')
+        if (!valueSize || !distance || !price) return
         setValueSize('')
-        if (valueKm > 1000) {
-            return setAnswer(valueKm * valueSize * 1.2)
-        }
-        if (valueSize > 100) {
-            return setAnswer(valueKm * 40)
-        }
-        return setAnswer(valueKm * valueSize)
+        if (distance < 2000) return setAnswer(valueSize * price + (distance * 10))
+        return setAnswer(valueSize * price + (distance * 40))
     }
 
     return (
-        <div className="calculator">
-            <div className="container">
-                <div className="calculator__h2">
-                    Калькулятор стоимости доставки
-                </div>
-                <div className="calculator__item">
-                    <div className="calculator__content">
-                        <div className="calculator__body">
-                            <input
-                                value={valueSize}
-                                onChange={saveValueSize}
-                                placeholder={'Укажите вес в килограммах'}
-                                type="text"
-                            /><br/><br/>
-                            <input
-                                value={valueKm}
-                                onChange={saveValueKm}
-                                placeholder={'Укажите расстояние до Вашего города'}
-                                type="text"
-                            /><br/><br/>
-                            <button onClick={calc}>Рассчитать!</button>
-                            <br/><br/>
-                            <p>Примерная стоимость доставки:<br/>
-                                {answer ? answer + ' рублей.' : null}
-                            </p>
-                        </div>
-                        <div className="calculator__callback">
-                            <form className='calculator__form' action="#">
-                                <input placeholder='Ваше Имя' type="text"/><br/><br/>
-                                <input placeholder='Ваш E-mail' type="email"/><br/><br/>
-                                <input
-                                    pattern="^[ 0-9]+$"
-                                    placeholder='Номер телефона' type="tel"
-                                /><br/><br/>
-                                <button>Закажите доставку прямо сейчас!</button>
-                            </form>
-                        </div>
+        <ScrollableAnchor id={"calc"}>
+            <div className="calculator">
+                <div className="container">
+                    <div className="calculator__h2">
+                        Калькулятор стоимости доставки
                     </div>
-                    <div className="calculator__text">
-                        *Отгрузка осуществляется со склада г.Санкт-Петербург. Указанная в калькуляторе стоимость является
-                        ориентировочной, за подробностями обращайтесь в отдел продаж!
+                    <div className="calculator__item">
+                        <div className="calculator__content">
+                            <div className="calculator__body">
+                                <input
+                                    value={valueSize}
+                                    onChange={saveValueSize}
+                                    placeholder={'Укажите вес в килограммах'}
+                                    type="number"
+                                /><br/><br/>
+                                <SelectPrice setPrice={setPrice}/><br/><br/>
+                                <SelectDistance setDistance={setDistance}/><br/><br/>
+                                <button onClick={calc}>Рассчитать!</button>
+                                <br/><br/>
+                                <p>Примерная стоимость металла с учетом доставки:<br/>
+                                    {answer ? answer + ' рублей.' : null}
+                                </p>
+                            </div>
+                            <div className="calculator__callback">
+                                <form className='calculator__form' action="#">
+                                    <input placeholder='Ваше Имя' type="text"/><br/><br/>
+                                    <input placeholder='Ваш E-mail' type="email"/><br/><br/>
+                                    <input
+                                        pattern="^[ 0-9]+$"
+                                        placeholder='Номер телефона' type="tel"
+                                    /><br/><br/>
+                                    <button>Закажите доставку прямо сейчас!</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div className="calculator__text">
+                            *Отгрузка осуществляется со склада г.Санкт-Петербург. Указанная в калькуляторе стоимость
+                            является
+                            ориентировочной, за подробностями обращайтесь в отдел продаж!
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </ScrollableAnchor>
     )
 }
 
