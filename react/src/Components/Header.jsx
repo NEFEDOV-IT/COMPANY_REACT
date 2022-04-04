@@ -7,10 +7,11 @@ const items = [
     {value: 'Наши проекты', href: '#projects'},
     {value: 'График добычи руды', href: '#graph'},
     {value: 'Калькулятор доставки металлов', href: '#calc'},
+    {value: 'График стоимости зотота', href: '#goldView'},
     {value: 'Ответы на вопросы', href: '#answer'},
     {value: 'Наши партнеры', href: '#partners'},
     {value: 'Отзывы', href: '#reviews'},
-    {value: 'Контакты', href: '#contacts'}
+    {value: 'Контакты', href: '#contacts'},
 ]
 
 export const Header = () => {
