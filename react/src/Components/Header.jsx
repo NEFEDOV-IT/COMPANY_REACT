@@ -5,8 +5,8 @@ import React, { useEffect, useState } from "react";
 const items = [
     {value: 'Главная', href: '#home'},
     {value: 'Наши проекты', href: '#projects'},
+    {value: 'График добычи руды', href: '#graph'},
     {value: 'Калькулятор доставки металлов', href: '#calc'},
-    {value: 'Портфолио', href: '#portfolio'},
     {value: 'Ответы на вопросы', href: '#answer'},
     {value: 'Наши партнеры', href: '#partners'},
     {value: 'Отзывы', href: '#reviews'},
@@ -45,11 +45,13 @@ export const Header = () => {
                 </header>
 
                 <div className="home">
-                    <h1 className="h1__design">
-                        ДОБЫВАЕМ ПОЛЕЗНЫЕ ИСКОПАЕМЫЕ<br/>
-                        ДОСТАВКА ПО ВСЕЙ РОССИИ
-                    </h1>
-                    <p>золото, руда, сереберо, каменный уголь</p>
+                    <div className="container">
+                        <h1 className="h1__design">
+                            ДОБЫВАЕМ ПОЛЕЗНЫЕ ИСКОПАЕМЫЕ<br/>
+                            ДОСТАВКА ПО ВСЕЙ РОССИИ
+                        </h1>
+                        <p>золото, руда, сереберо, каменный уголь</p>
+                    </div>
                 </div>
             </section>
         </ScrollableAnchor>

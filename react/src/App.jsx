@@ -8,6 +8,7 @@ import { Contacts } from "./Components/Contacts";
 import { Header } from "./Components/Header";
 import { WorkTime } from "./Components/Worktime";
 import { Footer } from "./Components/Footer";
+import { GraphTon } from "./Components/GraphTon";
 
 removeHash()
 configureAnchors({offset: -60, scrollDuration: 800})
@@ -19,6 +20,7 @@ function App() {
             <WorkTime/>
             <main className="main">
                 <Projects/>
+                <GraphTon/>
                 <Calculator/>
                 <Contacts/>
             </main>

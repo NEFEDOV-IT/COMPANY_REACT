@@ -8,7 +8,7 @@ export const Projects = () => {
                 <div className="container">
                     <div className="big__projects-body">
                         <div className="big__projects-h2">
-                            <h2 id="t1">НАШИ САМЫЕ БОЛЬШИЕ<br/> ПРОЕКТЫ</h2>
+                            <h2 id="t1">НАШИ САМЫЕ БОЛЬШИЕ ПРОЕКТЫ</h2>
                         </div>
 
                         <div className="big__projects-items">

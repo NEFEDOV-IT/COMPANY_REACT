@@ -11,7 +11,11 @@ html, body, #root {
 .container {
   max-width: 1080px;
   margin: 0 auto;
-  padding: 0 10px;
+}
+@media screen and (max-width: 1100px) {
+  .container {
+    padding: 0 10px;
+  }
 }
 
 .wrapper {
@@ -31,7 +35,7 @@ header, footer {
 
 .first-screen {
   background-size: cover;
-  background: url("src/img/first-screen.jpg") no-repeat;
+  background: url("src/img/first-screen.jpg") center top no-repeat;
   height: 100vh;
 }
 
@@ -45,6 +49,12 @@ header, footer {
   z-index: 50;
   padding: 0 10px;
   transition: background-color 0.3s ease;
+}
+@media screen and (max-width: 1100px) {
+  .header__body {
+    justify-content: space-between;
+    padding: 0 20px;
+  }
 }
 .header__body.active {
   background-color: #535058;
@@ -173,6 +183,11 @@ header, footer {
   justify-content: center;
   margin-bottom: -50px;
 }
+@media screen and (max-width: 1100px) {
+  .work__time {
+    margin-bottom: 100px;
+  }
+}
 
 .work__time-content {
   transform: translateY(-50%);
@@ -183,12 +198,20 @@ header, footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  text-align: center;
+}
+@media screen and (max-width: 1100px) {
+  .work__time-content {
+    flex-direction: column;
+    transform: translateY(0);
+    height: 100%;
+    padding: 20px;
+  }
 }
 
+.section {
+  flex: 1 0 25%;
+}
 .section .section-number {
-  width: 190px;
-  height: 86px;
   font-weight: 500;
   font-size: 72px;
   line-height: 107px;
@@ -240,6 +263,38 @@ header, footer {
   display: flex;
   justify-content: space-between;
 }
+@media screen and (max-width: 992px) {
+  .big__projects-items {
+    overflow: auto;
+  }
+}
+.big__projects-items .big__projects-item {
+  flex: 0 1 300px;
+}
+@media screen and (max-width: 992px) {
+  .big__projects-items .big__projects-item {
+    flex: 0 0 70%;
+  }
+}
+.big__projects-items .big__projects-item h3 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  color: #404149;
+  margin-bottom: 20px;
+}
+.big__projects-items .big__projects-item p {
+  color: #999999;
+  line-height: 137.5%;
+}
+.big__projects-items .big__projects-item img {
+  max-width: 300px;
+}
+@media screen and (max-width: 992px) {
+  .big__projects-items .big__projects-item img {
+    max-width: 100%;
+  }
+}
 
 .big__projects-img {
   margin-bottom: 45px;
@@ -255,26 +310,57 @@ hr {
   margin-bottom: 15px;
 }
 
-.big__projects-item {
-  flex: 0 1 300px;
-}
-.big__projects-item h3 {
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 36px;
-  color: #404149;
-  margin-bottom: 20px;
-}
-.big__projects-item p {
-  color: #999999;
-  line-height: 137.5%;
-}
-.big__projects-item img {
-  max-width: 300px;
-}
-
 .big__projects-item + .big__projects-item {
   margin-left: 30px;
+}
+
+/*****************************************************
+******************GRAPH_TON****************************
+*****************************************************/
+.graphTon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+.graphTon .graphTon__h2 {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 53px;
+  text-transform: uppercase;
+  color: #000;
+  text-align: center;
+  margin-bottom: 60px;
+}
+.graphTon .graphTon__text {
+  color: #999999;
+  line-height: 150%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.graphTon .graphTon__text .graphTon__text-ton {
+  display: flex;
+  align-items: center;
+}
+.graphTon .graphTon__text .graphTon__text-ton:before {
+  content: "";
+  background-color: #F7654A;
+  width: 50px;
+  height: 2px;
+  display: inline-block;
+}
+.graphTon .graphTon__text .graphTon__text-plan {
+  display: flex;
+  align-items: center;
+}
+.graphTon .graphTon__text .graphTon__text-plan:before {
+  content: "";
+  background-color: #656565;
+  width: 50px;
+  height: 2px;
+  display: inline-block;
 }
 
 /*****************************************************
@@ -290,9 +376,10 @@ hr {
   margin-bottom: 60px;
 }
 .calculator .calculator__text {
+  max-width: 800px;
   color: #999999;
   line-height: 137.5%;
-  margin-bottom: 30px;
+  margin: 0 auto 30px auto;
 }
 .calculator .calculator__item {
   border: 3px solid #F7654A;
