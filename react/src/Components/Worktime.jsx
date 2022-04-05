@@ -3,7 +3,6 @@ import React from "react";
 export const WorkTime = () => {
     return (
         <section className="work__time">
-            <div className="container">
                 <div className="work__time-content">
                     <div className="section">
                         <p className="section-number">25</p>
@@ -26,7 +25,6 @@ export const WorkTime = () => {
                         <p className="section__text">добываем серебро</p>
                     </div>
                 </div>
-            </div>
         </section>
     )
 }

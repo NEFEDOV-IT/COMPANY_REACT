@@ -104,7 +104,7 @@ const Calculator = () => {
                                 <SelectDistance setDistance={setDistance}/><br/><br/>
                                 <button onClick={calc}>Рассчитать!</button>
                                 <br/><br/>
-                                <p>Примерная стоимость металла с учетом доставки:<br/>
+                                <p className={'calculator__answer'}>Примерная стоимость металла с учетом доставки:<br/>
                                     {answer ? answer + ' рублей.' : null}
                                 </p>
                             </div>

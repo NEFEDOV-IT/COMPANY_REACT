@@ -8,9 +8,6 @@ const items = [
     {value: 'График добычи руды', href: '#graph'},
     {value: 'Калькулятор доставки металлов', href: '#calc'},
     {value: 'График стоимости зотота', href: '#goldView'},
-    {value: 'Ответы на вопросы', href: '#answer'},
-    {value: 'Наши партнеры', href: '#partners'},
-    {value: 'Отзывы', href: '#reviews'},
     {value: 'Контакты', href: '#contacts'},
 ]
 

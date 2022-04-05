@@ -1,6 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
 body {
   font-size: 16px;
-  font-family: Roboto, sans-serif;
+  font-family: "Oswald", "sans-serif";
   color: #fff;
 }
 
@@ -67,6 +69,7 @@ header, footer {
   height: 40px;
 }
 .header__body .header__text {
+  font-family: "Open Sans", sans-serif;
   font-size: 20px;
 }
 
@@ -79,6 +82,12 @@ header, footer {
   background-color: rgba(83, 80, 88, 0.9);
   transform: translateX(300%);
   transition: all 0.3s ease;
+  font-family: "Open Sans", sans-serif;
+}
+@media screen and (max-width: 767.98px) {
+  .header__nav {
+    width: 100%;
+  }
 }
 .header__nav.active {
   transform: translateX(0);
@@ -167,11 +176,21 @@ header, footer {
   letter-spacing: 0.02em;
   text-transform: uppercase;
 }
+@media screen and (max-width: 767.98px) {
+  .home h1 {
+    font-size: 28px;
+  }
+}
 .home p {
   font-size: 18px;
   line-height: 27px;
   text-align: center;
   text-transform: uppercase;
+}
+@media screen and (max-width: 767.98px) {
+  .home p {
+    font-size: 14px;
+  }
 }
 
 /*****************************************************
@@ -182,29 +201,34 @@ header, footer {
   align-items: center;
   justify-content: center;
   margin-bottom: -50px;
+  position: relative;
 }
 @media screen and (max-width: 1100px) {
   .work__time {
-    margin-bottom: 100px;
+    margin-bottom: 60px;
   }
 }
 
 .work__time-content {
   transform: translateY(-50%);
   height: 300px;
-  width: 1080px;
+  width: 100%;
+  max-width: 1080px;
   border-radius: 4px;
   background-color: #F7F7F7;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding: 0 200px;
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1100.98px) {
   .work__time-content {
+    position: inherit;
     flex-direction: column;
     transform: translateY(0);
     height: 100%;
-    padding: 20px;
+    margin-bottom: 0;
+    padding: 0 0 20px 0;
   }
 }
 
@@ -212,6 +236,8 @@ header, footer {
   flex: 1 0 25%;
 }
 .section .section-number {
+  width: 190px;
+  height: 86px;
   font-weight: 500;
   font-size: 72px;
   line-height: 107px;
@@ -244,10 +270,20 @@ header, footer {
 .big__projects {
   margin-bottom: 100px;
 }
+@media screen and (max-width: 1100px) {
+  .big__projects {
+    margin-bottom: 60px;
+  }
+}
 
 .big__projects-h2 {
   text-align: center;
   margin-bottom: 60px;
+}
+@media screen and (max-width: 1100px) {
+  .big__projects-h2 {
+    margin-bottom: 40px;
+  }
 }
 .big__projects-h2 h2 {
   text-align: center;
@@ -257,6 +293,11 @@ header, footer {
   line-height: 53px;
   text-transform: uppercase;
   color: #404149;
+}
+@media screen and (max-width: 767.98px) {
+  .big__projects-h2 h2 {
+    font-size: 28px;
+  }
 }
 
 .big__projects-items {
@@ -284,8 +325,14 @@ header, footer {
   margin-bottom: 20px;
 }
 .big__projects-items .big__projects-item p {
+  font-family: "Open Sans", sans-serif;
   color: #999999;
   line-height: 137.5%;
+}
+@media screen and (max-width: 767.98px) {
+  .big__projects-items .big__projects-item p {
+    font-size: 14px;
+  }
 }
 .big__projects-items .big__projects-item img {
   max-width: 300px;
@@ -322,6 +369,12 @@ hr {
   align-items: center;
   justify-content: center;
   margin-bottom: 100px;
+  color: #000;
+}
+@media screen and (max-width: 1100px) {
+  .graphTon {
+    margin-bottom: 60px;
+  }
 }
 .graphTon .graphTon__h2 {
   font-weight: 500;
@@ -332,6 +385,12 @@ hr {
   text-align: center;
   margin-bottom: 60px;
 }
+@media screen and (max-width: 767.98px) {
+  .graphTon .graphTon__h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+}
 .graphTon .graphTon__text {
   color: #999999;
   line-height: 150%;
@@ -339,6 +398,11 @@ hr {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+@media screen and (max-width: 767.98px) {
+  .graphTon .graphTon__text {
+    font-size: 14px;
+  }
 }
 .graphTon .graphTon__text .graphTon__text-ton {
   display: flex;
@@ -375,11 +439,23 @@ hr {
   text-align: center;
   margin-bottom: 60px;
 }
+@media screen and (max-width: 767.98px) {
+  .calculator .calculator__h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+}
 .calculator .calculator__text {
   max-width: 800px;
   color: #999999;
   line-height: 137.5%;
   margin: 0 auto 30px auto;
+}
+@media screen and (max-width: 767.98px) {
+  .calculator .calculator__text {
+    font-size: 14px;
+    padding: 0 10px;
+  }
 }
 .calculator .calculator__item {
   border: 3px solid #F7654A;
@@ -390,6 +466,11 @@ hr {
   display: flex;
   color: #000;
   padding: 50px;
+}
+@media screen and (max-width: 767.98px) {
+  .calculator__content {
+    flex-direction: column;
+  }
 }
 .calculator__content .calculator__input {
   width: 100%;
@@ -420,6 +501,16 @@ hr {
   flex: 1 0 250px;
   margin-right: 50px;
 }
+@media screen and (max-width: 767.98px) {
+  .calculator__content .calculator__body {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .calculator__content .calculator__body .calculator__answer {
+    margin-bottom: 30px;
+  }
+}
 .calculator__content .calculator__callback {
   flex: 1 0 250px;
 }
@@ -435,6 +526,12 @@ hr {
   justify-content: space-between;
   margin-bottom: 60px;
 }
+@media screen and (max-width: 767.98px) {
+  .contacts__body {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 .contacts__h2 {
   font-weight: 500;
@@ -445,6 +542,12 @@ hr {
   text-align: center;
   margin-bottom: 60px;
 }
+@media screen and (max-width: 767.98px) {
+  .contacts__h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+}
 
 .contacts__content {
   display: flex;
@@ -454,6 +557,12 @@ hr {
   max-width: 255px;
   text-align: center;
   margin-right: 30px;
+}
+@media screen and (max-width: 767.98px) {
+  .contacts__content {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
 }
 .contacts__content:last-child {
   margin-right: 0;
@@ -490,6 +599,7 @@ hr {
 *****************************************************/
 footer {
   background-color: #404149;
+  font-family: "Open Sans", sans-serif;
 }
 
 .footer__body {
@@ -497,14 +607,19 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.footer__body-name a {
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 22px;
   color: #FFFFFF;
+}
+@media screen and (max-width: 767.98px) {
+  .footer__body {
+    font-size: 14px;
+  }
+}
+
+.footer__body-name a {
   text-decoration: none;
 }
 
