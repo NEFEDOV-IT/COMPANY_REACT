@@ -2,6 +2,7 @@ import { useState } from "react";
 import ScrollableAnchor from 'react-scrollable-anchor'
 import { SelectPrice } from './SelectPrice'
 import { SelectDistance } from "./SelectDistance";
+import { useDispatch, useSelector } from "react-redux";
 
 const calculatorH2 = (
     <div className="calculator__h2">
@@ -32,10 +33,12 @@ const calcText = (
 )
 
 const Calculator = () => {
-    const [answer, setAnswer] = useState(null)
     const [valueSize, setValueSize] = useState('')
     const [distance, setDistance] = useState(null)
     const [price, setPrice] = useState(null)
+
+    const dispatch = useDispatch()
+    const ans = useSelector(state => state.answer)
 
     function saveValueSize(e) {
         setValueSize(e.target.value)
@@ -44,8 +47,8 @@ const Calculator = () => {
     function calc() {
         if (!valueSize || !distance || !price) return
         setValueSize('')
-        if (distance < 2000) return setAnswer(valueSize * price + (distance * 10))
-        return setAnswer(valueSize * price + (distance * 40))
+        if (distance < 2000) return dispatch({type: 'add_answer', amount: valueSize * price + (distance * 10)})
+        return dispatch({type: 'add_answer', amount: valueSize * price + (distance * 40)})
     }
 
     return (
@@ -68,7 +71,7 @@ const Calculator = () => {
                                 <br/><br/>
                                 <p className={'calculator__answer'}>
                                     Примерная стоимость металла с учетом доставки:<br/>
-                                    {answer && answer + ' рублей.'}
+                                    {ans && ans + ' рублей.'}
                                 </p>
                             </div>
                             {calcCallBack}
