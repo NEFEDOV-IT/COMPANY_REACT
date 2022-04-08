@@ -2,6 +2,18 @@ import { Menu } from "./Menu";
 import ScrollableAnchor from "react-scrollable-anchor";
 import React, { useEffect, useState } from "react";
 
+const home = (
+    <div className="home">
+        <div className="container">
+            <h1 className="h1__design">
+                ДОБЫВАЕМ ПОЛЕЗНЫЕ ИСКОПАЕМЫЕ<br/>
+                ДОСТАВКА ПО ВСЕЙ РОССИИ
+            </h1>
+            <p>золото, руда, сереберо, каменный уголь</p>
+        </div>
+    </div>
+)
+
 const items = [
     {value: 'Главная', href: '#home'},
     {value: 'Наши проекты', href: '#projects'},
@@ -42,15 +54,7 @@ export const Header = () => {
                     </div>
                 </header>
 
-                <div className="home">
-                    <div className="container">
-                        <h1 className="h1__design">
-                            ДОБЫВАЕМ ПОЛЕЗНЫЕ ИСКОПАЕМЫЕ<br/>
-                            ДОСТАВКА ПО ВСЕЙ РОССИИ
-                        </h1>
-                        <p>золото, руда, сереберо, каменный уголь</p>
-                    </div>
-                </div>
+                {home}
             </section>
         </ScrollableAnchor>
     )

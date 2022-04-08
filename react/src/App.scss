@@ -537,6 +537,9 @@ hr {
 
   &:last-child {
     margin-right: 0;
+    & img {
+      margin: 5px 0 42px 0;
+    }
   }
 
   & img {

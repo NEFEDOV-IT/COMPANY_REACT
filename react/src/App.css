@@ -567,6 +567,9 @@ hr {
 .contacts__content:last-child {
   margin-right: 0;
 }
+.contacts__content:last-child img {
+  margin: 5px 0 42px 0;
+}
 .contacts__content img {
   margin-bottom: 36px;
   max-width: 50px;

@@ -2,6 +2,22 @@ import ScrollableAnchor from "react-scrollable-anchor";
 import React from "react";
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 
+
+const graph = {
+    h2: (
+        <div className="graphTon__h2">
+            График добычи руды за прошлый год
+        </div>
+    ),
+    text: (
+        <div className="graphTon__text">
+            <p>*Добыча руды указана в тоннах за месяц.</p>
+            <span className={'graphTon__text-ton'}> &nbsp; - Фактическая добыча</span>
+            <span className={'graphTon__text-plan'}> &nbsp; - Плановая добыча</span>
+        </div>
+    )
+}
+
 const data = [
     {name: 'янв.', fact: 400, plan: 300},
     {name: 'фев.', fact: 300, plan: 200},
@@ -35,15 +51,9 @@ export const GraphTon = () => {
         <ScrollableAnchor id={"graph"}>
             <section className={'graphTon'}>
                 <div className="container">
-                    <div className="graphTon__h2">
-                        График добычи руды за прошлый год
-                    </div>
+                    {graph.h2}
                     {renderLineChart}
-                    <div className="graphTon__text">
-                        <p>*Добыча руды указана в тоннах за месяц.</p>
-                        <span className={'graphTon__text-ton'}> &nbsp; - Фактическая добыча</span>
-                        <span className={'graphTon__text-plan'}> &nbsp; - Плановая добыча</span>
-                    </div>
+                    {graph.text}
                 </div>
             </section>
         </ScrollableAnchor>

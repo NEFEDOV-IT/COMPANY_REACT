@@ -1,30 +1,36 @@
 import React from "react";
 
+const year = 'лет';
+
+const workInfo = [
+    {number: 25, year: year, text: 'на рынке', id: 1},
+    {number: 20, year: year, text: 'добываем золото', id: 2},
+    {number: 15, year: year, text: 'добываем руду', id: 3},
+    {number: 17, year: year, text: 'добываем серебро', id: 4},
+]
+
+function SectionItems({item}) {
+    return (
+        <div className="section">
+            <p className="section-number">{item.number}</p>
+            <p className="section-year">{item.year}</p>
+            <p className="section__text">{item.text}</p>
+        </div>
+    )
+}
+
 export const WorkTime = () => {
     return (
         <section className="work__time">
-                <div className="work__time-content">
-                    <div className="section">
-                        <p className="section-number">25</p>
-                        <p className="section-year">лет</p>
-                        <p className="section__text">на рынке</p>
-                    </div>
-                    <div className="section">
-                        <p className="section-number">20</p>
-                        <p className="section-year">лет</p>
-                        <p className="section__text">добываем золото</p>
-                    </div>
-                    <div className="section">
-                        <p className="section-number">15</p>
-                        <p className="section-year">лет</p>
-                        <p className="section__text">добываем руду</p>
-                    </div>
-                    <div className="section">
-                        <p className="section-number">17</p>
-                        <p className="section-year">лет</p>
-                        <p className="section__text">добываем серебро</p>
-                    </div>
-                </div>
+            <div className="work__time-content">
+                {workInfo.map(item => {
+                    return <SectionItems
+                        key={item.id}
+                        item={item}
+                    />
+                })
+                }
+            </div>
         </section>
     )
 }

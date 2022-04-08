@@ -27,7 +27,9 @@ const Menu = ({header, items, setScroll, scroll}) => {
             </div>
             <nav className={menuActive ? 'header__nav active' : 'header__nav'}>
                 <div className="menu__content">
-                    <div className="menu__header">{header}</div>
+                    <div className="menu__header">
+                        {header}
+                    </div>
                     <ul>
                         {items.map((item, index) =>
                             <ListItem
