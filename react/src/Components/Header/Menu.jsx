@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Menu.css'
 
 function ListItem({item, setMenuActive, setScroll}) {
     function click() {

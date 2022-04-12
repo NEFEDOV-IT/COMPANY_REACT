@@ -1,0 +1,25 @@
+footer {
+  background-color: #404149;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.footer__body {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #FFFFFF;
+  @media screen and (max-width: 767.98px) {
+    font-size: 14px;
+  }
+}
+
+.footer__body-name {
+  & a {
+    text-decoration: none;
+  }
+}

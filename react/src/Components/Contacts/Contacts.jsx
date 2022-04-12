@@ -1,6 +1,7 @@
 import ScrollableAnchor from "react-scrollable-anchor";
 import React from "react";
 import { YandexMaps } from "./YandexMaps";
+import './Contacts.css'
 
 const contactsH2 = (
     <div className="contacts__h2">

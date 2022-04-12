@@ -1,0 +1,71 @@
+.first-screen {
+  background-size: cover;
+  background: url("src/img/first-screen.jpg") center top no-repeat;
+  height: 100vh;
+}
+
+.header__body {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  z-index: 50;
+  padding: 0 10px;
+  transition: background-color 0.3s ease;
+  @media screen and (max-width: 1100px) {
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  &.active {
+    background-color: #535058;
+  }
+  & .header__icon {
+    cursor: pointer;
+    & img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  & .header__text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+  }
+}
+
+/*****************************************************
+******************HOME******************************
+*****************************************************/
+
+.home {
+  padding: 150px 20px;
+  margin: 0 auto;
+  & h1 {
+    margin: 0 auto;
+    max-width: 900px;
+    font-weight: 500;
+    text-shadow: 1px 0 1px #000,
+    0 1px 1px #000,
+    -1px 0 1px #000,
+    0 -1px 1px #000;
+    font-size: 40px;
+    line-height: calc(30/16) * 100%;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    @media screen and (max-width: 767.98px) {
+      font-size: 28px;
+    }
+  }
+
+  & p {
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    text-transform: uppercase;
+    @media screen and (max-width: 767.98px) {
+      font-size: 14px;
+    }
+  }
+}

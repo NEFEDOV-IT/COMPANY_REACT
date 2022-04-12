@@ -1,4 +1,5 @@
 import React from "react";
+import './Footer.css'
 
 const footerBody = (
     <div className="footer__body">

@@ -1,4 +1,5 @@
 import React from "react";
+import './WorkTime.css'
 
 const year = 'лет';
 

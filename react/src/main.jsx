@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './index.css'
+import './App.css'
 import App from './App'
 import { YMaps } from "react-yandex-maps";
-import { createStore } from "redux";
+import { applyMiddleware, compose, createStore } from "redux";
 import { Provider } from "react-redux";
 
 
@@ -19,6 +19,8 @@ const reducer = (state = calculator, action) => {
     }
 }
 
+// const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+// const store = createStore(rootReducers, composeEnhancers(applyMiddleware(thunk)))
 const store = createStore(reducer)
 
 ReactDOM.render(

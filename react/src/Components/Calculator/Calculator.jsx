@@ -3,6 +3,8 @@ import ScrollableAnchor from 'react-scrollable-anchor'
 import { SelectPrice } from './SelectPrice'
 import { SelectDistance } from "./SelectDistance";
 import { useDispatch, useSelector } from "react-redux";
+import { addAnswer } from "../../Actions";
+import './Calculator.css'
 
 const calculatorH2 = (
     <div className="calculator__h2">
@@ -47,8 +49,9 @@ const Calculator = () => {
     function calc() {
         if (!valueSize || !distance || !price) return
         setValueSize('')
-        if (distance < 2000) return dispatch({type: 'add_answer', amount: valueSize * price + (distance * 10)})
-        return dispatch({type: 'add_answer', amount: valueSize * price + (distance * 40)})
+        const answer = valueSize * price + (distance * 10)
+        if (distance < 2000) return dispatch(addAnswer(answer))
+        return dispatch(addAnswer(answer * 4))
     }
 
     return (

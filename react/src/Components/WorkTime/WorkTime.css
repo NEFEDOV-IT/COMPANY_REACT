@@ -1,0 +1,69 @@
+.work__time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: -50px;
+  position: relative;
+}
+@media screen and (max-width: 1100px) {
+  .work__time {
+    margin-bottom: 60px;
+  }
+}
+
+.work__time-content {
+  transform: translateY(-50%);
+  height: 300px;
+  width: 100%;
+  max-width: 1080px;
+  border-radius: 4px;
+  background-color: #F7F7F7;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 200px;
+}
+@media screen and (max-width: 1100.98px) {
+  .work__time-content {
+    position: inherit;
+    flex-direction: column;
+    transform: translateY(0);
+    height: 100%;
+    margin-bottom: 0;
+    padding: 0 0 20px 0;
+  }
+}
+
+.section {
+  flex: 1 0 25%;
+}
+.section .section-number {
+  width: 190px;
+  height: 86px;
+  font-weight: 500;
+  font-size: 72px;
+  line-height: 107px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #F7654A;
+  margin-bottom: 25px;
+}
+.section .section-year {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 53px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 10px;
+}
+.section .section__text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
+  color: #999;
+}
+
+/*# sourceMappingURL=WorkTime.css.map */

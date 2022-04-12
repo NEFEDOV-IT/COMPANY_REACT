@@ -1,0 +1,64 @@
+.graphTon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 100px;
+  color: #000;
+}
+@media screen and (max-width: 1100px) {
+  .graphTon {
+    margin-bottom: 60px;
+  }
+}
+.graphTon .graphTon__h2 {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 53px;
+  text-transform: uppercase;
+  color: #000;
+  text-align: center;
+  margin-bottom: 60px;
+}
+@media screen and (max-width: 767.98px) {
+  .graphTon .graphTon__h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+}
+.graphTon .graphTon__text {
+  color: #999999;
+  line-height: 150%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media screen and (max-width: 767.98px) {
+  .graphTon .graphTon__text {
+    font-size: 14px;
+  }
+}
+.graphTon .graphTon__text .graphTon__text-ton {
+  display: flex;
+  align-items: center;
+}
+.graphTon .graphTon__text .graphTon__text-ton:before {
+  content: "";
+  background-color: #F7654A;
+  width: 50px;
+  height: 2px;
+  display: inline-block;
+}
+.graphTon .graphTon__text .graphTon__text-plan {
+  display: flex;
+  align-items: center;
+}
+.graphTon .graphTon__text .graphTon__text-plan:before {
+  content: "";
+  background-color: #656565;
+  width: 50px;
+  height: 2px;
+  display: inline-block;
+}
+
+/*# sourceMappingURL=GraphTon.css.map */

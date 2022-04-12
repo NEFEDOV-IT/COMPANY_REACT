@@ -1,6 +1,7 @@
 import { Menu } from "./Menu";
 import ScrollableAnchor from "react-scrollable-anchor";
 import React, { useEffect, useState } from "react";
+import './Header.css'
 
 const home = (
     <div className="home">

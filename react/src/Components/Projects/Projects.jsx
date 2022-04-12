@@ -1,5 +1,6 @@
 import ScrollableAnchor from 'react-scrollable-anchor'
 import React from "react";
+import './Projects.css'
 
 const bigProjectsH2 = (
     <div className="big__projects-h2">

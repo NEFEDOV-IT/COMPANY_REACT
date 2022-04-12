@@ -1,5 +1,6 @@
 import ScrollableAnchor from "react-scrollable-anchor";
 import React from "react";
+import './Graphton.css'
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 
 
