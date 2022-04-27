@@ -21,7 +21,7 @@ const items = [
   { value: "Наши проекты", href: "#projects" },
   { value: "График добычи руды", href: "#graph" },
   { value: "Калькулятор доставки металлов", href: "#calc" },
-  { value: "График стоимости зотота", href: "#goldView" },
+  { value: "График стоимости золота", href: "#goldView" },
   { value: "Контакты", href: "#contacts" },
 ];
 

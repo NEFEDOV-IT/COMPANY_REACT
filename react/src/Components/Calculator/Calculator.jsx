@@ -56,7 +56,7 @@ const Calculator = () => {
 
   return (
     <ScrollableAnchor id={"calc"}>
-      <div className="calculator">
+      <section className="calculator">
         <div className="container">
           {calculatorH2}
           <div className="calculator__item">
@@ -82,7 +82,7 @@ const Calculator = () => {
             {calcText}
           </div>
         </div>
-      </div>
+      </section>
     </ScrollableAnchor>
   )
 }

@@ -33,8 +33,18 @@
   }
   .big__projects-item {
     flex: 0 1 300px;
+    padding: 10px;
+    transform-style: preserve-3d;
+    transition: all 0.5s;
+    border-radius: 4px;
     @media screen and (max-width: 992px){
       flex: 0 0 70%;
+    }
+    @media screen and(min-width: 992px) {
+      &:hover {
+        box-shadow: 0 0 50px #000;
+        transform: translateZ(10px) rotateX(10deg) rotateY(15deg);
+      }
     }
     & h3 {
       font-weight: 500;

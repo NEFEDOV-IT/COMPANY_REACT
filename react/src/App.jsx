@@ -21,7 +21,6 @@ function App() {
     requestPrice().then((response) =>
       setInitialData(JSON.stringify(response.values))
     );
-    console.log(initialData);
   }, [initialData]);
   return (
     <div className="wrapper">

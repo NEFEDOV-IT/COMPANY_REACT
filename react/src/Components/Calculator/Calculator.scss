@@ -50,14 +50,18 @@
     border-radius: 4px;
   }
   & button {
-    padding: 10px 15px;
-    border-radius: 4px;
-    background-color: #F7654A;
-    color: #fff;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    padding: 10px 25px;
+    border: 3px solid #F7654A;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #F7654A;
     cursor: pointer;
     transition: transform 0.3s ease;
     &:hover {
-      transform: scale(1.1);
+      animation: pulsate 1s ease-in-out;
     }
   }
   & .calculator__body {
@@ -76,5 +80,13 @@
     flex: 1 0 250px;
   }
   .calculator__form {
+  }
+}
+
+@keyframes pulsate {
+  0% {
+    box-shadow:
+    0 0 15px #a60000,
+    0 0 30px #F7654A;
   }
 }
